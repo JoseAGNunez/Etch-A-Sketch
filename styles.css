@@ -4,3 +4,8 @@ body {
     margin: 0px;
     padding: 0px;
 }
+
+@font-face {
+    font-family: "Rougant";
+    src: local("Rougant"), url("./fonts/Rougant.otf") format("opentype");
+};
