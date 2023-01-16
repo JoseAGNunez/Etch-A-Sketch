@@ -3,9 +3,11 @@ body {
     flex-direction: column;
     margin: 0px;
     padding: 0px;
+    background-color: #0B171E;
 }
 
-@font-face {
-    font-family: "Rougant";
-    src: local("Rougant"), url("./fonts/Rougant.otf") format("opentype");
-};
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    }
