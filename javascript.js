@@ -81,10 +81,26 @@ clearButton.style.color = '#FF00FF';
 clearButton.style.padding = '8px';
 clearButton.style.fontSize = '15px';
 clearButton.style.fontFamily = 'Roboto';
+let clearButtonHover = document.getElementById('clearButton');
+clearButton.addEventListener ('mouseover', function(e){
+    clearButton.style.backgroundColor = '#FF00FF';
+    clearButton.style.color = '#0d1d26'
+});
+clearButton.addEventListener ('mouseout', function(e){
+    clearButton.style.backgroundColor = '#0d1d26';
+    clearButton.style.color = '#FF00FF'
+});
 clearButton.addEventListener('click', function(e){
-    gridSize = document.getElementById('gridSizeSlider').value;
-    gridContainer.innerHTML = '';
-    ETCH();
+    let clear = document.querySelectorAll('.gridSquares');
+    console.log(clear);
+    clear.forEach(element => {
+        element.style.transition = "all 1.3s ease-in-out";
+        element.style.backgroundColor = 'white';
+        function delay(){
+            element.style.transition = "all .2s ease-in-out";
+        }
+        setTimeout(delay, 1300);
+    });
 });
 
 //grid container
